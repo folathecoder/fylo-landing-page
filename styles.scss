@@ -11,7 +11,7 @@
         }
     }
     @else if $size == tablet-mini {
-        @media screen and (max-width: 786px) {
+        @media screen and (max-width: 822px) {
             @content;
         }
     }
@@ -57,6 +57,15 @@ h1 {
     color: $color-pry-1;
     font-size: 2.5rem; 
     line-height: 3.5rem;
+
+    @include media-query(tablet) {
+        font-size: 2.3rem; 
+        line-height: 3.2rem;
+    } 
+    @include media-query(mobile) {
+        font-size: 1.6rem; 
+        line-height: 2.3rem;
+    } 
 }
 p {
     font-family: $font-body;
@@ -64,6 +73,15 @@ p {
     color: $color-pry-1;
     font-size: 1.1rem; 
     line-height: 1.5rem; 
+
+    @include media-query(tablet) {
+        font-size: 1rem; 
+        line-height: 1.4rem; 
+    }
+    @include media-query(mobile) {
+        font-size: 0.85rem; 
+        line-height: 1.4rem; 
+    }
 }
 a {
     text-decoration: none;
@@ -130,7 +148,7 @@ nav {
 .hero__container {
     background-color: $color-bg;
     max-width: 100%;
-    min-height: 100px;
+    min-height: 0px;
 }
 .hero {
     // background-color: rgb(204, 44, 71);
@@ -140,13 +158,36 @@ nav {
     display: flex;
     align-items: center;
 
+    @include media-query (tablet-mini) {
+        flex-wrap: wrap;
+        padding: 100px 40px; 
+        text-align: center;
+    }
+
+    @include media-query(mobile) {
+        padding: 10px 10px; 
+        flex-direction: column-reverse;
+    } 
+
     &__heading-sign-up {
-        flex: 1;
+        flex: 1; 
         // background-color: yellow;
         padding: 20px;
         
         p {
             margin-top: -15px;
+        }
+
+
+        @include media-query (tablet-mini) {
+            flex: 1 500px;
+        }
+        @include media-query (mobile) {
+            flex: 1  300px;
+            margin-top: -50px;
+        }
+        @include media-query (mobile-mini) {
+            margin-top: -60px;
         }
     }
     &__image {
@@ -155,12 +196,23 @@ nav {
         flex: 1;
         img {
             width: 100%;
+            height: auto;
+        }
+
+        @include media-query (tablet-mini) {
+            flex: 1  500px;
+        }
+        @include media-query (mobile) {
+            flex: 1  300px;
         }
     }
 }
 
 .form {
     padding-top: 15px;
+    @include media-query(mobile) {
+        display: block;
+    }
     &__email {
         height: 40px;
         width: 60%;
@@ -170,6 +222,12 @@ nav {
         font-weight: $font-light;
         border-radius: 4px;
         border: 1px solid black;
+
+        @include media-query(mobile) {
+            width: 100%;
+            box-sizing: border-box;
+  
+        }
     }
     &__button {
         height: 43px;
@@ -181,8 +239,14 @@ nav {
         border: none;
         border-radius: 4px;
 
+        @include media-query(mobile) {
+            width: 100%;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+
         &:hover {
-            background-color: saturate($color: $color-accent-, $amount: 50%);
+            background-color: saturate($color: $color-accent-1, $amount: 50%);
         }
     }
 }
