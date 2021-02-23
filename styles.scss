@@ -44,7 +44,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    background-color: yellow;
+    background-color:$color-bg;
     min-height: 100vh;
     font-family: $font-light;
     font-weight: $font-light;
@@ -65,6 +65,22 @@ h1 {
     @include media-query(mobile) {
         font-size: 1.6rem; 
         line-height: 2.3rem;
+    } 
+}
+h2 {
+    font-family: $font-heading;
+    font-weight: $font-bold;
+    color: $color-pry-1;
+    font-size: 2.1rem; 
+    line-height: 3rem;
+
+    @include media-query(tablet) {
+        font-size: 1.7rem; 
+        line-height: 2rem;
+    } 
+    @include media-query(mobile) {
+        font-size: 1.1rem; 
+        line-height: 2rem;
     } 
 }
 p {
@@ -178,7 +194,6 @@ nav {
             margin-top: -15px;
         }
 
-
         @include media-query (tablet-mini) {
             flex: 1 500px;
         }
@@ -201,6 +216,10 @@ nav {
 
         @include media-query (tablet-mini) {
             flex: 1  500px;
+
+            img {
+                width: 70%;
+            }
         }
         @include media-query (mobile) {
             flex: 1  300px;
@@ -251,9 +270,144 @@ nav {
     }
 }
 
+.productive__container {
+    background-color:$color-bg;
+    max-width: 100%;
+    min-height: 0px;
+    margin: 100px 0px;
+}
+.productive {
+        // background-color: purple;
+        max-width: 1240px;
+        min-height: 600px;  
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+
+        @include media-query(tablet) {
+            flex-wrap: wrap;
+        }
+        @include media-query(mobile) {
+            flex-direction: column-reverse;
+        }
+
+        &__text {
+            flex: 1 410px;
+            padding: 20px;
+
+            @include media-query(mobile) {
+                h2 {
+                    text-align: center;
+                }
+    
+                flex: 1 400px;
+            }
+        }
+        &__image {
+            flex: 1 410px;
+            padding: 10px;
+
+            @include media-query(mobile) {
+                flex: 1 400px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__link {
+            a {
+                line-height: 2rem;
+                
+            }
+
+            @include media-query(mobile) {
+               align-self: center;
+            }
+        }
+        &__arrow {
+            padding-top: -50px;
+        }
 
 
 
+
+        &__testimonial {
+            padding: 20px;
+            max-width: 250px;
+            min-height: 0px;
+            box-shadow: 0px 0px 10px rgb(228, 228, 228);
+            margin-top: 40px;
+            border-radius: 3px;
+
+            p {
+                font-size: 0.9rem;
+                font-weight: $font-light;
+            }
+
+            @include media-query(mobile) {
+                padding: 20px;
+                max-width: 250px;
+                margin: 50px auto;
+
+                p {
+                    font-size: 0.75rem;
+                    font-weight: $font-light;
+                }
+            }
+        }
+}
+.user {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        
+        img {
+            width: 50px;
+            border-radius: 50px;
+
+            @include media-query(mobile) {
+                width: 25px;
+            }
+        }
+    }
+
+    &__bio {
+        display: block;
+        padding-left: 10px;
+
+        p:first-of-type {
+            font-size: 0.8rem;
+            font-weight: $font-bold;
+            line-height: 1rem;
+            margin-bottom: -9px;
+
+            @include media-query(mobile) {
+                font-size: 0.65rem;
+                line-height: 1.4rem;
+                margin-top: -5px;
+            }
+        }
+        p {
+            font-size: 0.65rem;
+            line-height: 1rem;
+
+            @include media-query(mobile) {
+                font-size: 0.65rem;
+                line-height: 0rem;
+            }
+        }
+
+
+
+    }
+}
+
+.quotes {
+    margin-bottom: -10px;
+}
 
 
 
