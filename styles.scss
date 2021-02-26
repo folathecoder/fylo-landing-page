@@ -95,7 +95,7 @@ p {
     line-height: 1.5rem; 
 
     @include media-query(tablet) {
-        font-size: 1rem; 
+        font-size: 0.9rem; 
         line-height: 1.4rem; 
     }
     @include media-query(mobile) {
@@ -497,13 +497,13 @@ nav {
         width: 90%;
     }
 }
-.form__email {
+.form__email-sub {
     width: 100%;
     box-sizing: border-box;
 
 
 }
-.form__button {
+.form__button-sub {
     width: 40%;
     margin-top: 10px;
     margin-left: 0px;
@@ -516,11 +516,130 @@ nav {
 
 
 
+footer {
+    background-color: $color-pry-1;
+    min-height: 10px;
+    max-width: 100%;
+    padding: 40px 0px;
+    // box-sizing: border-box;
+}
+.footer-container {
+    max-width: 1400px;
+    min-height: 10px;
+    margin: 0px auto;
+}
+
+.footer {
+
+    &_container1 {
+        // background-color: yellow;
+        height: 70px;
+        width: 90%;
+        margin: 0px auto;
+
+        img {
+           color: $color-bg;
+
+        }
+    }
+
+    &_container2 {
+        background-color: #fff;
+        min-height: 200px;
+        width: 90%;
+        margin: 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.foot {
+    background-color: pink;
+    min-height: 100px;
+    padding: 20px 10px;
+
+    // &_part1 {
+    //     flex: 3 1;
+    //     // background-color: red;
+    //     display: flex;
+        
+    //     @include media-query(tablet) {
+    //         flex: 2 1 1600px;
+    //     }
+    //     @include media-query(mobile) {
+    //         flex: 2 1 600px;
+    //     }
+
+    //     img {
+    //         margin: 5px 20px 0px 0px;
+    //     }
+    // }
+
+    &_part1 {
+        flex: 2 1;
+        background-color: rgb(128, 77, 77);
+
+        @include media-query(mobile) {
+            flex: 1 1 300px;
+        }
+
+        .telephone {
+            display: flex;
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+        }
+
+        .email {
+            display: flex;
+            margin-top: 20px;
+
+            img {
+                width: 20px;
+                height: 15px;
+                margin: 0px 10px 0px 0px;
+            }
+        }
+    }
+
+    &_part3, &_part4 {
+        flex: 1 1;
+        // background-color: rgb(141, 137, 185);
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        @include media-query(mobile) {
+            flex: 1 1 300px;
+            text-align: left;
+        }
+
+        a {
+            margin-bottom: 15px;
+            color: white; 
+        }
+    }
+
+    &_part5 {
+        flex: 2 1;
+        text-align: center;
+        @include media-query(tablet) {
+            flex: 1 1;
+        }
+        @include media-query(mobile) {
+            flex: 1 1 300px;
+            text-align: left;
+        }
+    }
+}
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding: 0px 10px;
 }
-
 .attribution a {
     color: hsl(228, 45%, 44%);
-}
+} 
