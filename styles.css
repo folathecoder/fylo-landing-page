@@ -502,6 +502,10 @@ nav li {
   }
 }
 
+#a:hover {
+  background-color: #05d6b3;
+}
+
 .user {
   display: -webkit-box;
   display: -ms-flexbox;

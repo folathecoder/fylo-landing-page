@@ -365,7 +365,7 @@ nav {
                     transition: 0.5s;
 
                     img {
-                        color: saturate($color: $color-accent-2, $amount: 50%)
+                        color: saturate($color: $color-accent-2, $amount: 50%);
                     }
                 }
 
@@ -403,6 +403,10 @@ nav {
                 }
             }
         }
+}
+
+#a:hover {
+    background-color: saturate($color: $color-accent-2, $amount: 50%);
 }
 .user {
     display: flex;
