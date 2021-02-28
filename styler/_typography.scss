@@ -1,0 +1,62 @@
+//typography
+h1 {
+    font-family: $font-heading;
+    font-weight: $font-bold;
+    color: $color-pry-1;
+    font-size: 2.5rem; 
+    line-height: 3.2rem;
+
+    @include media-query(tablet) {
+        font-size: 2.3rem; 
+        line-height: 3rem;
+    } 
+    @include media-query(mobile) {
+        font-size: 1.5rem; 
+        line-height: 2rem;
+    } 
+}
+h2 {
+    font-family: $font-heading;
+    font-weight: $font-bold;
+    color: $color-pry-1;
+    font-size: 2.1rem; 
+    line-height: 3rem;
+
+    @include media-query(tablet) {
+        font-size: 1.7rem; 
+        line-height: 2rem;
+    } 
+    @include media-query(mobile) {
+        font-size: 1.1rem; 
+        line-height: 2rem;
+    } 
+}
+p {
+    font-family: $font-body;
+    font-weight: $font-light;
+    color: $color-pry-1;
+    font-size: 1rem; 
+    line-height: 1.5rem; 
+
+    @include media-query(tablet) {
+        font-size: 0.9rem; 
+        line-height: 1.4rem; 
+    }
+    @include media-query(mobile) {
+        font-size: 0.85rem; 
+        line-height: 1.4rem; 
+    }
+}
+a {
+    text-decoration: none;
+    font-family: $font-body;
+    font-weight: $font-light;
+    color: $color-pry-2;
+    font-size: 0.9rem;
+    @include media-query(mobile) {
+        font-size: 0.85rem;
+    }
+}
+li {
+    list-style: none;
+}

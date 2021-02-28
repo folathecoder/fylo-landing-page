@@ -1,0 +1,28 @@
+//media queries
+@mixin media-query ($size) {
+    @if $size == desktop {
+        @media screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media screen and (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $size == tablet-mini {
+        @media screen and (max-width: 822px) {
+            @content;
+        }
+    }
+    @else if $size == mobile {
+        @media screen and (max-width: 576px) {
+            @content;
+        }
+    }
+    @else if $size == mobile-mini {
+        @media screen and (max-width: 320px) {
+            @content;
+        }
+    }
+}
