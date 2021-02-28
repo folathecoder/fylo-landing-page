@@ -342,7 +342,9 @@ nav li {
 }
 
 .form__button:hover {
-  background-color: #2962ff;
+  background-color: #5677d2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .productive__container {
@@ -451,6 +453,17 @@ nav li {
   padding-bottom: 4px;
 }
 
+.productive__link a:hover {
+  border-bottom: 2px solid #05d6b3;
+  color: #05d6b3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.productive__link a:hover img {
+  color: #05d6b3;
+}
+
 .productive__link a img {
   margin-bottom: -4px;
 }
@@ -459,10 +472,6 @@ nav li {
   .productive__link {
     text-align: center;
   }
-}
-
-.productive__arrow {
-  padding-top: -50px;
 }
 
 .productive__testimonial {
@@ -668,6 +677,7 @@ footer {
   height: 70px;
   width: 90%;
   margin: 0px auto;
+  padding-top: 40px;
 }
 
 .footer_container1 img {
@@ -696,6 +706,12 @@ footer {
 .foot a {
   color: white;
   line-height: 2rem;
+}
+
+.foot a:hover {
+  color: #5677d2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .foot ul {
@@ -748,6 +764,12 @@ footer {
 .foot_part4 i {
   font-size: 1.5rem;
   color: white;
+}
+
+.foot_part4 i:hover {
+  color: #5677d2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .attribution {

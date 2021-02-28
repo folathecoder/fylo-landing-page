@@ -284,7 +284,8 @@ nav {
         }
 
         &:hover {
-            background-color: saturate($color: $color-accent-1, $amount: 50%);
+            background-color: desaturate($color: $color-accent-1, $amount: 35%);
+            transition: 0.5s;
         }
     }
 }
@@ -358,6 +359,16 @@ nav {
                 color: $color-accent-2;
                 padding-bottom: 4px;
 
+                &:hover {
+                    border-bottom: 2px solid saturate($color: $color-accent-2, $amount: 50%);
+                    color: saturate($color: $color-accent-2, $amount: 50%);
+                    transition: 0.5s;
+
+                    img {
+                        color: saturate($color: $color-accent-2, $amount: 50%)
+                    }
+                }
+
                 img {
                     margin-bottom: -4px;
                 }
@@ -367,10 +378,6 @@ nav {
                text-align: center;
             }
         }
-        &__arrow {
-            padding-top: -50px;
-        }
-
         &__testimonial {
             padding: 20px;
             max-width: 300px;
@@ -547,6 +554,7 @@ footer {
         height: 70px;
         width: 90%;
         margin: 0px auto;
+        padding-top: 40px;
 
         img {
            color: $color-bg;
@@ -571,7 +579,13 @@ footer {
     a {
         color: $color-bg;
         line-height: 2rem;
+
+        &:hover {
+            color: desaturate($color: $color-accent-1, $amount: 35%);
+            transition: 0.5s;
+        }
     }
+    
 
     ul{
         padding: 0px;
@@ -618,7 +632,6 @@ footer {
 
         ul {
             display: flex;
-  
         }
 
         li {
@@ -634,6 +647,11 @@ footer {
         i {
             font-size: 1.5rem;
             color: $color-bg;
+
+            &:hover {
+                color: desaturate($color: $color-accent-1, $amount: 35%);
+                transition: 0.5s;
+            }
         }
     }
 }
